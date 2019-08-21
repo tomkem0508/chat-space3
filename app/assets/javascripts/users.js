@@ -22,15 +22,6 @@ $(function() {
     $("#chat-group-users").append(html);
   }
 
-  /* STEP3:チャットメンバーから削除 HTML作成 */
-  function removeUser(user) {
-    var html = `
-      <div class="chat-group-user clearfix">
-        <p class="chat-group-user__name">${ user.userName }</p>
-        <a class="user-search-add chat-group-user__btn chat-group-user__btn--add" data-user-id="${user.userId}" data-user-name="${user.userName}">追加</a>
-      </div>`;
-    search_list.append(html);
-  }
 
   /*keyupイベントとAjax*/　
   $("#user-search-field").on("keyup", function() {
