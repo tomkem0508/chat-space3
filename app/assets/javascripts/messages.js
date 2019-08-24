@@ -1,3 +1,4 @@
+
 $(function(){
   // メッセージ表示のHTML生成
   function buildHTML(message) {
