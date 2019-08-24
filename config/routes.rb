@@ -5,5 +5,8 @@ Rails.application.routes.draw do
   resources :groups, only: [:new, :create, :edit, :update] do
     resources :messages, only: [:index, :create]
     resources :users, only: [:index]
+    namespace :api do
+      resources :messages, only: :index, defaults: { format: 'json' }
+    end
   end
 end
